@@ -41,3 +41,4 @@ jobs:
           name: invoice-app-apk
           path: app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
+
