@@ -34,8 +34,8 @@ jobs:
         with:
           gradle-version: '8.9'
 
-      - name: Diagnose Gradle tasks
-        run: gradle :app:tasks --all
+      - name: Build debug APK
+        run: gradle :app:assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
@@ -43,3 +43,4 @@ jobs:
           name: invoice-app-apk
           path: app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
+
